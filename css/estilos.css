@@ -35,3 +35,62 @@ body {
     color: #94a3b8;
     max-width: 700px;
 }
+/* =========================
+   HU2 - INTEGRANTES
+========================= */
+
+.equipo {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.equipo__titulo {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 3rem;
+}
+
+.equipo__grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 2rem;
+}
+
+.integrante {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+
+    padding: 2rem 1.5rem;
+
+    transition: transform 0.3s ease;
+}
+
+.integrante:hover {
+    transform: translateY(-8px);
+}
+
+.integrante__foto {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-bottom: 1.5rem;
+}
+
+.integrante__nombre {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.integrante__rol {
+    color: #94a3b8;
+    font-size: 1rem;
+}
