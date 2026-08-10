@@ -146,3 +146,133 @@ body {
     transform: translateY(-4px);
     border-color: #38bdf8;
 }
+
+/* =========================
+   HU4 - CONTACTO / FOOTER
+========================= */
+
+.contacto {
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+    background: #0b1120;
+    border-top: 1px solid #334155;
+}
+
+/* Título */
+
+.contacto h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 2rem;
+}
+
+/* GitHub del proyecto */
+
+.contacto > a {
+    display: inline-block;
+    text-decoration: none;
+    color: #f8fafc;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 0.9rem 1.8rem;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.contacto > a:hover {
+    transform: translateY(-4px);
+    border-color: #38bdf8;
+    background-color: #263449;
+}
+
+/* Contenedor de integrantes */
+
+.contacto__integrantes {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Tarjetas */
+
+.contacto__integrante {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+
+    padding: 1.5rem;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.contacto__integrante:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+}
+
+/* Nombre y rol */
+
+.contacto__integrante p {
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+/* Correos */
+
+.contacto__integrante a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    transition: color 0.3s ease;
+}
+
+.contacto__integrante a:hover {
+    color: #7dd3fc;
+}
+
+/* Copyright */
+
+.contacto::after {
+    content: "Equipo de trabajo · Parcial 1 · Programación Web";
+    display: block;
+
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+
+    border-top: 1px solid #1e293b;
+
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.contacto__integrantes {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contacto__integrante {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+
+    padding: 1.5rem 2rem;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
