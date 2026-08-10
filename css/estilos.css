@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
+}
+
+.portada {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+.portada__nombre {
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 900px;
+}
+
+.portada__lema {
+    margin-top: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-style: italic;
+    color: #94a3b8;
+    max-width: 700px;
+}
+/* =========================
+   HU2 - INTEGRANTES
+========================= */
+
+.equipo {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.equipo__titulo {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 3rem;
+}
+
+.equipo__grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 2rem;
+}
+
+.integrante {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+
+    padding: 2rem 1.5rem;
+
+    transition: transform 0.3s ease;
+}
+
+.integrante:hover {
+    transform: translateY(-8px);
+}
+
+.integrante__foto {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-bottom: 1.5rem;
+}
+
+.integrante__nombre {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.integrante__rol {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+/* =========================
+   HU3 - NUESTRO PROYECTO
+========================= */
+
+.proyecto {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.proyecto__titulo {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1.5rem;
+}
+
+.proyecto__descripcion {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #94a3b8;
+}
+
+.proyecto__tecnologias {
+    max-width: 900px;
+    margin: 0 auto;
+
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tecnologia {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 999px;
+
+    padding: 0.6rem 1.4rem;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #f8fafc;
+
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tecnologia:hover {
+    transform: translateY(-4px);
+    border-color: #38bdf8;
+}
