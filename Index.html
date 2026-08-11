@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la Página</title>
+    <title>Equipo de trabajo parcial 1 Programacion Web</title>
 
     <!-- Hoja de estilos -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <header>
-        <h1>Mi Sitio Web</h1>
+    <header class="portada">
+        <h1 class="portada__nombre">Equipo de trabajo parcial 1 Programacion Web</h1>
+        <p class="portada__lema">Solos escribimos código, juntos construimos soluciones.</p>
     </header>
 
     <nav>
@@ -19,15 +20,106 @@
     </nav>
 
     <main>
-        <!-- Contenido principal -->
+    <section class="equipo">
+        <h2 class="equipo__titulo">Conoce al equipo</h2>
+
+        <div class="equipo__grid">
+
+            <article class="integrante">
+                <img src="img/integrante1.jpg" alt="Foto de integrante 1" class="integrante__foto">
+                <h3 class="integrante__nombre">Rodrigo Herrera</h3>
+                <p class="integrante__rol">Desarrollador Frontend</p>
+            </article>
+
+            <article class="integrante">
+                <img src="img/integrante2.jpg" alt="Foto de integrante 2" class="integrante__foto">
+                <h3 class="integrante__nombre">Luis Samayoa</h3>
+                <p class="integrante__rol">Desarrollador Backend</p>
+            </article>
+
+            <article class="integrante">
+                <img src="img/integrante3.jpg" alt="Foto de integrante 3" class="integrante__foto">
+                <h3 class="integrante__nombre">Christopher López</h3>
+                <p class="integrante__rol">Diseñador UI/UX</p>
+            </article>
+
+            <article class="integrante">
+                <img src="img/integrante4.jpg" alt="Foto de integrante 4" class="integrante__foto">
+                <h3 class="integrante__nombre">Sophia Corea</h3>
+                <p class="integrante__rol">QA Tester</p>
+            </article>
+
+            <article class="integrante">
+                <img src="img/integrante5.jpg" alt="Foto de integrante 5" class="integrante__foto">
+                <h3 class="integrante__nombre">Martin Sierra</h3>
+                <p class="integrante__rol">Project Manager</p>
+            </article>
+
+        </div>
+    </section>
+    
+    <section class="proyecto">
+        <h2 class="proyecto__titulo">Nuestro proyecto</h2>
+        <p class="proyecto__descripcion">
+            Una landing page desarrollada en equipo para presentar quiénes somos, 
+            qué construimos y con qué tecnologías trabajamos.
+        </p>
+
+        <ul class="proyecto__tecnologias">
+            <li class="tecnologia">HTML5</li>
+            <li class="tecnologia">CSS3</li>
+            <li class="tecnologia">JavaScript</li>
+            <li class="tecnologia">Git</li>
+            <li class="tecnologia">GitHub</li>
+        </ul>
+    </section>
     </main>
 
-    <aside>
-        <!-- Contenido secundario -->
-    </aside>
+    <footer class="contacto">
+        <h2>Contacto</h2>
 
-    <footer>
-        <p>&copy; 2026 Mi Sitio Web</p>
+        <a href="https://github.com/Scoreap/Landing-Page.git" target="_blank">
+            GitHub del proyecto
+        </a>
+
+        <div class="contacto__integrantes">
+            
+            <div class="contacto__integrante">
+                <p>Rodrigo Herrera - Desarrollador Frontend</p>
+                <a href="mailto:jrherreram@correo.url.edu.gt">
+                    jrherreram@correo.url.edu.gt
+                </a>
+            </div>
+
+            <div class="contacto__integrante">
+                <p>Luis Samayoa - Desarrollador Backend</p>
+                <a href="mailto:lfsamayoasa@correo.url.edu.gt">
+                    lfsamayoasa@correo.url.edu.gt
+                </a>
+            </div>
+
+            <div class="contacto__integrante">
+                <p>Christopher López - QA Tester</p>
+                <a href="mailto:cclopezv@correo.url.edu.gt">
+                    cclopezv@correo.url.edu.gt
+                </a>
+            </div>
+
+            <div class="contacto__integrante">
+                <p>Sophia Cordero - Diseñador UI/UX</p>
+                <a href="mailto:scoreap@correo.url.edu.gt">
+                    scoreap@correo.url.edu.gt
+                </a>
+            </div>
+
+            <div class="contacto__integrante">
+                <p>Martin Sierra - Project Manager</p>
+                <a href="mailto:masierrac@correo.url.edu.gt">
+                    masierrac@correo.url.edu.gt
+                </a>
+            </div>
+
+        </div>
     </footer>
 
     <!-- Archivo JavaScript -->
