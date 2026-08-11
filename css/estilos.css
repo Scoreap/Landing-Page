@@ -1,0 +1,1558 @@
+/* ==========================================================
+   HU5 · ESTILO, COLOR Y DISEÑO ADAPTABLE
+   ==========================================================
+   Diseño moderno, editorial y tecnológico.
+   Se conserva la estructura creada en HU1 - HU4.
+   ========================================================== */
+
+
+/* ==========================================================
+   1. VARIABLES GENERALES
+   ========================================================== */
+
+:root {
+    /* Fondos */
+    --bg: #111312;
+    --bg-soft: #171a19;
+    --surface: #1d2523;
+    --surface-light: #26312e;
+
+    /* Verde grisáceo */
+    --green-dark: #20312e;
+    --green: #45615c;
+    --green-light: #78928c;
+
+    /* Texto */
+    --white: #f2f1ec;
+    --text: #d9dad5;
+    --muted: #aeb3b0;
+    --muted-dark: #7e8581;
+
+    /* Bordes */
+    --border: rgba(242, 241, 236, 0.14);
+    --border-light: rgba(242, 241, 236, 0.30);
+
+    /* Medidas */
+    --radius-lg: 28px;
+    --radius-md: 20px;
+    --radius-sm: 12px;
+
+    --max-width: 1180px;
+
+    color-scheme: dark;
+}
+
+
+/* ==========================================================
+   2. RESET
+   ========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    overflow-x: hidden;
+}
+
+
+body {
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        system-ui,
+        sans-serif;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 80% 5%,
+            rgba(77, 108, 101, 0.14),
+            transparent 28rem
+        ),
+        radial-gradient(
+            circle at 10% 35%,
+            rgba(109, 128, 122, 0.07),
+            transparent 30rem
+        ),
+        var(--bg);
+
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+::selection {
+    background: var(--white);
+    color: var(--bg);
+}
+
+
+/* ==========================================================
+   3. PORTADA · HU1
+   ========================================================== */
+
+.portada {
+    position: relative;
+
+    width: min(calc(100% - 40px), var(--max-width));
+
+    min-height: 86vh;
+    min-height: 86svh;
+
+    margin: 20px auto 0;
+
+    padding:
+        clamp(3rem, 8vw, 7rem)
+        clamp(1.5rem, 6vw, 5rem);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    text-align: left;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(63, 88, 83, 0.42),
+            rgba(27, 34, 32, 0.86) 50%,
+            rgba(18, 20, 19, 0.98)
+        );
+}
+
+
+/* Luz ambiental */
+
+.portada::before {
+    content: "";
+
+    position: absolute;
+
+    width: 440px;
+    height: 440px;
+
+    right: -100px;
+    top: -130px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(143, 167, 159, 0.22),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+
+/* Etiqueta superior */
+
+.portada::after {
+    content: "PROGRAMACIÓN WEB / EQUIPO";
+
+    position: absolute;
+
+    top: 30px;
+    left: clamp(1.5rem, 6vw, 5rem);
+
+    color: var(--muted);
+
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* Título */
+
+.portada__nombre {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 950px;
+
+    color: var(--white);
+
+    font-size: clamp(2.8rem, 7vw, 6.3rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.055em;
+
+    line-height: 0.98;
+
+    text-wrap: balance;
+}
+
+
+/* Lema */
+
+.portada__lema {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 650px;
+
+    margin-top: 2rem;
+
+    color: var(--muted);
+
+    font-size: clamp(1rem, 2vw, 1.25rem);
+
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   4. CONTENIDO GENERAL
+   ========================================================== */
+
+main {
+    width: 100%;
+}
+
+
+.equipo,
+.proyecto {
+    width: min(calc(100% - 40px), var(--max-width));
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ==========================================================
+   5. EQUIPO · HU2
+   ========================================================== */
+
+.equipo {
+    padding:
+        clamp(6rem, 10vw, 9rem)
+        0;
+}
+
+
+/* Título */
+
+.equipo__titulo {
+    max-width: 750px;
+
+    margin-bottom: 3rem;
+
+    color: var(--white);
+
+    font-size: clamp(2.5rem, 6vw, 5rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.045em;
+
+    line-height: 1;
+
+    text-align: left;
+}
+
+
+/* ==========================================================
+   6. GRID DE INTEGRANTES
+   ========================================================== */
+
+.equipo__grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(min(205px, 100%), 1fr)
+        );
+
+    gap: 14px;
+
+    align-items: stretch;
+}
+
+
+/* ==========================================================
+   7. TARJETAS DE INTEGRANTES
+   ========================================================== */
+
+.integrante {
+    position: relative;
+
+    min-width: 0;
+
+    height: 390px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 12px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #26312e,
+            #1b2220
+        );
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* Indicador para abrir tarjeta */
+
+.integrante::after {
+    content: "↗";
+
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+
+    z-index: 2;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.48);
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background:
+        rgba(10, 13, 12, 0.38);
+
+    font-size: 1rem;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* ==========================================================
+   8. FOTOGRAFÍAS
+   Se mantienen sus colores originales.
+   ========================================================== */
+
+.integrante__foto {
+    display: block;
+
+    width: 100%;
+    height: 275px;
+
+    flex-shrink: 0;
+
+    margin-bottom: 1.2rem;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 15px;
+
+    /*
+       No se aplica ningún filtro.
+       La imagen conserva su apariencia original.
+    */
+
+    filter: none;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+/* ==========================================================
+   9. NOMBRE Y ROL
+   ========================================================== */
+
+.integrante__nombre {
+    padding:
+        0
+        10px;
+
+    color: var(--white);
+
+    font-size: 1.18rem;
+
+    font-weight: 500;
+
+    letter-spacing: -0.025em;
+
+    line-height: 1.25;
+}
+
+
+.integrante__rol {
+    padding:
+        0
+        10px;
+
+    margin-top: 0.35rem;
+
+    color: var(--muted);
+
+    font-size: 0.87rem;
+
+    font-weight: 400;
+}
+
+
+/* ==========================================================
+   10. HOVER DE TARJETAS
+   ========================================================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .integrante:hover {
+        transform: translateY(-6px);
+
+        border-color:
+            rgba(242, 241, 236, 0.32);
+
+        background:
+            linear-gradient(
+                145deg,
+                #30413d,
+                #202a27
+            );
+    }
+
+
+    .integrante:hover .integrante__foto {
+        /*
+           Únicamente zoom.
+           No modifica los colores.
+        */
+
+        transform: scale(1.015);
+    }
+
+
+    .integrante:hover::after {
+        transform: rotate(45deg);
+
+        background:
+            rgba(242, 241, 236, 0.16);
+    }
+}
+
+
+/* Navegación con teclado */
+
+.integrante:focus-visible {
+    outline: 3px solid var(--white);
+
+    outline-offset: 4px;
+}
+
+
+/* ==========================================================
+   11. NUESTRO PROYECTO · HU3
+   ========================================================== */
+
+.proyecto {
+    position: relative;
+
+    min-height: 650px;
+
+    margin-bottom:
+        clamp(6rem, 10vw, 10rem);
+
+    padding:
+        clamp(3rem, 6vw, 5.5rem);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(49, 78, 72, 0.92),
+            rgba(28, 44, 40, 0.97) 58%,
+            rgba(22, 29, 27, 1)
+        );
+}
+
+
+/* Símbolo decorativo */
+
+.proyecto::before {
+    content: "</>";
+
+    position: absolute;
+
+    top: 10%;
+    right: 7%;
+
+    color:
+        rgba(242, 241, 236, 0.07);
+
+    font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(8rem, 25vw, 18rem);
+
+    font-weight: 700;
+
+    letter-spacing: -0.1em;
+
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+/* Etiqueta superior */
+
+.proyecto::after {
+    content: "WHAT WE BUILD";
+
+    position: absolute;
+
+    top: 35px;
+
+    left:
+        clamp(2rem, 6vw, 5.5rem);
+
+    color:
+        rgba(242, 241, 236, 0.65);
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.16em;
+
+    font-weight: 500;
+}
+
+
+/* Título */
+
+.proyecto__titulo {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 700px;
+
+    margin-bottom: 1.5rem;
+
+    color: var(--white);
+
+    font-size:
+        clamp(2.7rem, 7vw, 5.5rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.05em;
+
+    line-height: 1;
+}
+
+
+/* Descripción */
+
+.proyecto__descripcion {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 650px;
+
+    margin-bottom: 2.4rem;
+
+    color: #d0d6d2;
+
+    font-size:
+        clamp(1rem, 2vw, 1.15rem);
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   12. TECNOLOGÍAS
+   ========================================================== */
+
+.proyecto__tecnologias {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    list-style: none;
+}
+
+
+.tecnologia {
+    min-height: 42px;
+
+    padding:
+        0.6rem
+        1.15rem;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(242, 241, 236, 0.30);
+
+    border-radius: 999px;
+
+    color: var(--white);
+
+    background:
+        rgba(17, 19, 18, 0.25);
+
+    font-size: 0.82rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .tecnologia:hover {
+        transform: translateY(-2px);
+
+        border-color:
+            rgba(242, 241, 236, 0.65);
+
+        background:
+            rgba(242, 241, 236, 0.09);
+    }
+}
+
+
+/* ==========================================================
+   13. CONTACTO · HU4
+   ========================================================== */
+
+.contacto {
+    position: relative;
+
+    width: min(calc(100% - 40px), var(--max-width));
+
+    margin:
+        0
+        auto
+        20px;
+
+    padding:
+        clamp(3rem, 6vw, 5rem);
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        #1b2422;
+
+    text-align: left;
+}
+
+
+/* Título */
+
+.contacto h2 {
+    margin-bottom: 2rem;
+
+    color: var(--white);
+
+    font-size:
+        clamp(2.5rem, 6vw, 4.8rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.045em;
+
+    line-height: 1;
+}
+
+
+/* ==========================================================
+   14. BOTÓN GITHUB
+   ========================================================== */
+
+.contacto > a {
+    min-height: 48px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 3rem;
+
+    padding:
+        0.75rem
+        1.4rem;
+
+    border:
+        1px solid
+        var(--border-light);
+
+    border-radius: 999px;
+
+    color: var(--white);
+
+    background: transparent;
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.contacto > a::after {
+    content: " ↗";
+
+    margin-left: 0.4rem;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .contacto > a:hover {
+        transform: translateY(-2px);
+
+        background:
+            var(--white);
+
+        color:
+            var(--bg);
+    }
+}
+
+
+/* ==========================================================
+   15. TARJETAS DE CONTACTO
+   ========================================================== */
+
+.contacto__integrantes {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(min(220px, 100%), 1fr)
+        );
+
+    gap: 10px;
+}
+
+
+.contacto__integrante {
+    min-width: 0;
+
+    min-height: 145px;
+
+    padding: 1.5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 15px;
+
+    background:
+        rgba(11, 15, 14, 0.30);
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.contacto__integrante p {
+    margin-bottom: 0.5rem;
+
+    color: var(--text);
+
+    font-size: 0.92rem;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+
+.contacto__integrante a {
+    color: var(--muted);
+
+    font-size: 0.85rem;
+
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .contacto__integrante:hover {
+        transform: translateY(-3px);
+
+        background-color:
+            rgba(74, 100, 94, 0.25);
+
+        border-color:
+            var(--border-light);
+    }
+
+
+    .contacto__integrante a:hover {
+        color: var(--white);
+
+        text-decoration: underline;
+
+        text-underline-offset: 4px;
+    }
+}
+
+
+/* ==========================================================
+   16. COPYRIGHT DEL FOOTER
+   ========================================================== */
+
+.contacto::after {
+    content:
+        "Equipo de trabajo · Parcial 1 · Programación Web";
+
+    display: block;
+
+    margin-top: 3rem;
+
+    padding-top: 1.5rem;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    color: var(--muted-dark);
+
+    font-size: 0.78rem;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* ==========================================================
+   17. MODAL · VISTA AMPLIADA DEL INTEGRANTE
+   ========================================================== */
+
+.integrante-modal {
+    width:
+        min(920px, calc(100% - 30px));
+
+    max-height: 90vh;
+
+    margin: auto;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(242, 241, 236, 0.18);
+
+    border-radius: 26px;
+
+    color: var(--white);
+
+    background: #18201e;
+}
+
+
+/* Fondo detrás de la ventana */
+
+.integrante-modal::backdrop {
+    background:
+        rgba(5, 7, 6, 0.82);
+
+    backdrop-filter:
+        blur(8px);
+}
+
+
+/* Contenido */
+
+.integrante-modal__contenido {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 0.9fr)
+        1.1fr;
+
+    min-height: 520px;
+}
+
+
+/* ==========================================================
+   18. FOTO DEL MODAL
+   ========================================================== */
+
+.integrante-modal__imagen {
+    width: 100%;
+    height: 100%;
+
+    min-height: 520px;
+
+    object-fit: cover;
+    object-position: center;
+
+    /*
+       También se conserva
+       completamente original.
+    */
+
+    filter: none;
+}
+
+
+/* ==========================================================
+   19. INFORMACIÓN DEL MODAL
+   ========================================================== */
+
+.integrante-modal__informacion {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding:
+        clamp(2rem, 6vw, 4rem);
+}
+
+
+/* Etiqueta */
+
+.integrante-modal__etiqueta {
+    margin-bottom: 1.4rem;
+
+    color: var(--muted);
+
+    font-size: 0.72rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+/* Nombre */
+
+.integrante-modal__nombre {
+    margin:
+        0
+        0
+        0.8rem;
+
+    color: var(--white);
+
+    font-size:
+        clamp(2.4rem, 6vw, 4.8rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.055em;
+
+    line-height: 0.95;
+}
+
+
+/* Rol */
+
+.integrante-modal__rol {
+    margin-bottom: 2rem;
+
+    color: #c0c9c5;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+}
+
+
+/* Línea */
+
+.integrante-modal__linea {
+    width: 100%;
+
+    margin-bottom: 2rem;
+
+    border: 0;
+
+    border-top:
+        1px solid
+        rgba(242, 241, 236, 0.16);
+}
+
+
+/* Descripción */
+
+.integrante-modal__descripcion {
+    max-width: 42ch;
+
+    color: var(--muted);
+
+    font-size: 1rem;
+
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   20. BOTÓN PARA CERRAR MODAL
+   ========================================================== */
+
+.integrante-modal__cerrar {
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+
+    z-index: 10;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    border:
+        1px solid
+        rgba(242, 241, 236, 0.28);
+
+    border-radius: 50%;
+
+    color: var(--white);
+
+    background:
+        rgba(17, 19, 18, 0.72);
+
+    font-size: 1.25rem;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.integrante-modal__cerrar:hover {
+    color: var(--bg);
+
+    background: var(--white);
+}
+
+
+.integrante-modal__cerrar:focus-visible {
+    outline:
+        3px solid
+        var(--white);
+
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================
+   21. ACCESIBILIDAD DE LINKS
+   ========================================================== */
+
+a:focus-visible {
+    outline:
+        3px solid
+        var(--white);
+
+    outline-offset: 4px;
+
+    border-radius: 5px;
+}
+
+
+/* ==========================================================
+   22. TABLETS
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .portada,
+    .equipo,
+    .proyecto,
+    .contacto {
+        width:
+            min(
+                calc(100% - 28px),
+                var(--max-width)
+            );
+    }
+
+
+    .portada {
+        min-height: 75vh;
+
+        border-radius: 22px;
+    }
+
+
+    .equipo {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+
+    /* Dos integrantes por fila */
+
+    .equipo__grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .integrante {
+        height: 420px;
+    }
+
+
+    .integrante__foto {
+        height: 305px;
+    }
+
+
+    .proyecto {
+        min-height: 560px;
+
+        border-radius: 22px;
+    }
+
+
+    .contacto {
+        border-radius: 22px;
+    }
+}
+
+
+/* ==========================================================
+   23. CELULARES
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+    .portada,
+    .equipo,
+    .proyecto,
+    .contacto {
+        width:
+            calc(100% - 20px);
+    }
+
+
+    /* PORTADA */
+
+    .portada {
+        min-height: 90svh;
+
+        margin-top: 10px;
+
+        padding:
+            5rem
+            1.5rem
+            2.5rem;
+
+        border-radius: 20px;
+    }
+
+
+    .portada::after {
+        top: 24px;
+
+        left: 1.5rem;
+
+        font-size: 0.61rem;
+    }
+
+
+    .portada__nombre {
+        font-size:
+            clamp(2.7rem, 14vw, 4.3rem);
+
+        line-height: 0.98;
+    }
+
+
+    .portada__lema {
+        margin-top: 1.5rem;
+
+        font-size: 1rem;
+    }
+
+
+    /* EQUIPO */
+
+    .equipo {
+        padding:
+            5rem
+            0;
+    }
+
+
+    .equipo__titulo {
+        margin-bottom: 2rem;
+
+        font-size:
+            clamp(2.7rem, 13vw, 4rem);
+    }
+
+
+    /* Una tarjeta por fila */
+
+    .equipo__grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+       Todas continúan teniendo
+       exactamente el mismo tamaño.
+    */
+
+    .integrante {
+        width: 100%;
+
+        height: 470px;
+    }
+
+
+    .integrante__foto {
+        width: 100%;
+
+        height: 350px;
+
+        aspect-ratio: auto;
+    }
+
+
+    /* PROYECTO */
+
+    .proyecto {
+        min-height: 580px;
+
+        padding:
+            5rem
+            1.5rem
+            2rem;
+
+        margin-bottom: 5rem;
+
+        border-radius: 20px;
+    }
+
+
+    .proyecto::after {
+        top: 25px;
+        left: 1.5rem;
+
+        font-size: 0.62rem;
+    }
+
+
+    .proyecto::before {
+        top: 16%;
+
+        right: -5%;
+
+        font-size: 9rem;
+    }
+
+
+    .proyecto__titulo {
+        font-size:
+            clamp(2.7rem, 13vw, 4rem);
+    }
+
+
+    .proyecto__descripcion {
+        font-size: 0.98rem;
+    }
+
+
+    .proyecto__tecnologias {
+        gap: 7px;
+    }
+
+
+    .tecnologia {
+        min-height: 40px;
+
+        padding:
+            0.55rem
+            0.9rem;
+    }
+
+
+    /* CONTACTO */
+
+    .contacto {
+        margin-bottom: 10px;
+
+        padding:
+            3.5rem
+            1.25rem
+            2rem;
+
+        border-radius: 20px;
+    }
+
+
+    .contacto h2 {
+        font-size:
+            clamp(2.6rem, 13vw, 4rem);
+    }
+
+
+    .contacto > a {
+        width: 100%;
+    }
+
+
+    .contacto__integrantes {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contacto__integrante {
+        min-height: 125px;
+    }
+
+
+    /* MODAL */
+
+    .integrante-modal {
+        width:
+            calc(100% - 20px);
+
+        max-height: 92vh;
+
+        overflow-y: auto;
+
+        border-radius: 20px;
+    }
+
+
+    .integrante-modal__contenido {
+        display: block;
+
+        min-height: 0;
+    }
+
+
+    .integrante-modal__imagen {
+        width: 100%;
+
+        height: 360px;
+
+        min-height: 0;
+    }
+
+
+    .integrante-modal__informacion {
+        padding:
+            2.2rem
+            1.5rem
+            2.5rem;
+    }
+
+
+    .integrante-modal__nombre {
+        font-size:
+            clamp(2.5rem, 14vw, 3.8rem);
+    }
+}
+
+
+/* ==========================================================
+   24. PANTALLAS MUY PEQUEÑAS
+   ========================================================== */
+
+@media (max-width: 360px) {
+
+    .portada__nombre {
+        font-size: 2.45rem;
+    }
+
+
+    .proyecto,
+    .contacto {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+
+    .integrante {
+        height: 430px;
+    }
+
+
+    .integrante__foto {
+        height: 310px;
+    }
+
+
+    .tecnologia {
+        width: 100%;
+    }
+}
+
+
+/* ==========================================================
+   25. REDUCCIÓN DE MOVIMIENTO
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
+    }
+
+
+    .integrante:hover,
+    .integrante:hover .integrante__foto,
+    .tecnologia:hover,
+    .contacto > a:hover,
+    .contacto__integrante:hover {
+        transform: none;
+    }
+}
